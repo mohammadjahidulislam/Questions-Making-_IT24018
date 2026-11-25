@@ -23,9 +23,10 @@ Mawlana Bhashani Science and Technology University
 3. [Course Outcomes (CO)](#-course-outcomes-co)
 4. [Bloom's Taxonomy and BNQF Alignment](#-blooms-taxonomy-and-bnqf-alignment)
 5. [Question Paper](#-question-paper)
-6. [Question–CO Mapping](#-questionco-mapping-obe-summary)
-7. [Marks Distribution](#-marks-distribution)
-8. [Marking Rubric](#-marking-rubric)
+6. [Topic → Question → CO Map](#-topic--question--co-map)
+7. [Question–CO Mapping](#-questionco-mapping-obe-summary)
+8. [Marks Distribution](#-marks-distribution)
+9. [Marking Rubric](#-marking-rubric)
 
 ---
 
@@ -168,6 +169,64 @@ An online hospital appointment system has patients, doctors and admins. The `Doc
 - **(a)** Compare **Page Controller** and **Front Controller**. Which one is more appropriate for this system? Justify your answer. `[3]`
 - **(b)** Compare **Single Table**, **Class Table** and **Concrete Table** Inheritance for mapping the `Doctor` hierarchy to a database. Recommend one with justification. `[3]`
 - **(c)** The appointment screen shows slot availability using only red (booked) and green (free). Identify the UI design principle violated and propose two improvements. `[2]`
+
+---
+
+## 🔀 Topic → Question → CO Map
+
+The diagram below shows which topic area each question comes from, and which CO it assesses.
+
+```mermaid
+flowchart LR
+    subgraph TOPICS["Topic Areas"]
+        direction TB
+        T1["Software Design<br/>Fundamentals"]
+        T2["Software<br/>Architecture"]
+        T3["Design Quality<br/>Metrics (CK)"]
+        T4["GoF Design<br/>Patterns"]
+        T5["Enterprise Application<br/>Patterns"]
+        T6["User Interface<br/>Design"]
+    end
+
+    subgraph QUESTIONS["Questions"]
+        direction TB
+        Q1["Q1<br/>6 marks"]
+        Q2["Q2<br/>8 marks"]
+        Q3["Q3<br/>10 marks"]
+        Q4["Q4<br/>8 marks"]
+        Q5["Q5<br/>8 marks"]
+    end
+
+    subgraph OUTCOMES["Course Outcomes"]
+        direction TB
+        C1["CO1"]
+        C2["CO2"]
+        C3["CO3"]
+        C4["CO4"]
+        C5["CO5"]
+    end
+
+    T1 --> Q1
+    T2 --> Q2
+    T3 --> Q3
+    T4 --> Q4
+    T5 --> Q5
+    T6 --> Q5
+
+    Q1 --> C1
+    Q2 --> C2
+    Q3 --> C3
+    Q4 --> C4
+    Q5 --> C5
+
+    classDef topic fill:#e8f0fe,stroke:#4285f4,stroke-width:2px,color:#0b1f4d;
+    classDef question fill:#fff3d6,stroke:#e0a100,stroke-width:2px,color:#3d2c00;
+    classDef outcome fill:#e1f5ea,stroke:#1e9e6a,stroke-width:2px,color:#0a3d29;
+
+    class T1,T2,T3,T4,T5,T6 topic;
+    class Q1,Q2,Q3,Q4,Q5 question;
+    class C1,C2,C3,C4,C5 outcome;
+```
 
 ---
 
